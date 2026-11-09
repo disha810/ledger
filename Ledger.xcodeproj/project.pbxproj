@@ -29,6 +29,23 @@
 		759BFF573096225700E23891 /* LedgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LedgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		759B004F3099A37F00E23891 /* Exceptions for "LedgerTests" folder in "Ledger" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataTests/MockKeychainService.swift,
+			);
+			target = 759BFF3F3096225600E23891 /* Ledger */;
+		};
+		759B00503099A37F00E23891 /* Exceptions for "LedgerTests" folder in "LedgerTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataTests/MockKeychainService.swift,
+			);
+			target = 759BFF4C3096225700E23891 /* LedgerTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		759BFF423096225600E23891 /* Ledger */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -37,6 +54,10 @@
 		};
 		759BFF503096225700E23891 /* LedgerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				759B004F3099A37F00E23891 /* Exceptions for "LedgerTests" folder in "Ledger" target */,
+				759B00503099A37F00E23891 /* Exceptions for "LedgerTests" folder in "LedgerTests" target */,
+			);
 			path = LedgerTests;
 			sourceTree = "<group>";
 		};
@@ -388,7 +409,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
